@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "630626173091",
+    "firebase_url": "https://skhool-6c230.firebaseio.com",
+    "project_id": "skhool-6c230",
+    "storage_bucket": "skhool-6c230.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630626173091:android:f349bd9962a515349aff16",
+        "android_client_info": {
+          "package_name": "com.example.skhool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630626173091-m1jigf0l5b4pn2kvtgtv9od9jeqrlkle.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.skhool",
+            "certificate_hash": "05fad0822c4883cba50a0b7b671b5061a512945c"
+          }
+        },
+        {
+          "client_id": "630626173091-28qf72diaml8c4jtdm6esdk8dt80hskg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsZGKx-MTIrm7OlukvOZ2Rg1O3Vmh8K2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630626173091-28qf72diaml8c4jtdm6esdk8dt80hskg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
