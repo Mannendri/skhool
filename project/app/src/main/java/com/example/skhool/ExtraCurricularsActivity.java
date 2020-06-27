@@ -3,10 +3,12 @@ package com.example.skhool;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -17,6 +19,8 @@ public class ExtraCurricularsActivity extends AppCompatActivity {
     EditText editTextName;
     ListView listView;
     int collegeScore;
+    ArrayList<ExtraCurricularItem> list = new ArrayList<ExtraCurricularItem>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +32,11 @@ public class ExtraCurricularsActivity extends AppCompatActivity {
         editTextYears = findViewById(R.id.editTextYears);
 
 
+
     }
 
     public void addExtraCurricular(View view) {
-        ArrayList<ExtraCurricularItem> list = new ArrayList<ExtraCurricularItem>();
+
         ExtraCurricularItem newItem = new ExtraCurricularItem(editTextName.getText().toString(), editTextYears.getText().toString());
         list.add(newItem);
         ExtraCurricularAdapter extraCurricularAdapter = new ExtraCurricularAdapter(this,list);
@@ -40,5 +45,8 @@ public class ExtraCurricularsActivity extends AppCompatActivity {
 
 
 
+
     }
+
+
 }
