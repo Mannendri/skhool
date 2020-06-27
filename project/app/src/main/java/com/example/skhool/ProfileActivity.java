@@ -43,6 +43,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
         usernameTextView = findViewById(R.id.usernameTextView);
         gradeTextView = findViewById(R.id.gradeTextView);
         emailTextView = findViewById(R.id.emailTextView);
@@ -53,16 +54,13 @@ public class ProfileActivity extends AppCompatActivity {
         userID = fAuth.getCurrentUser().getUid();
         user = fAuth.getCurrentUser();
 
-        final DocumentReference documentReference = fStore.collection("users").document(userID);
+        DocumentReference documentReference = fStore.collection("users").document(userID);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                if (documentSnapshot.exists()){
-                    usernameTextView.setText(documentSnapshot.getString("username"));
-                    gradeTextView.setText(documentSnapshot.getString("grade"));
-                    emailTextView.setText(documentSnapshot.getString("email")) ;
-
-                }
+                usernameTextView.setText(documentSnapshot.getString("username"));
+                gradeTextView.setText(documentSnapshot.getString("grade"));
+                emailTextView.setText(documentSnapshot.getString("email")) ;
             }
         });
 
@@ -103,6 +101,19 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        return;
+    }
+
+    public void openEditProfileActivity(View view) {
+        Intent intentToOpenEditProfileActivity = new Intent(this,EditProfileActivity.class);
+        intentToOpenEditProfileActivity.putExtra("username",usernameTextView.getText().toString());
+        intentToOpenEditProfileActivity.putExtra("grade",gradeTextView.getText().toString());
+        intentToOpenEditProfileActivity.putExtra("email",emailTextView.getText().toString());
+        startActivity(intentToOpenEditProfileActivity);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -114,7 +125,8 @@ public class ProfileActivity extends AppCompatActivity {
         if(item.getItemId() == R.id.sign_out_menu) {
             FirebaseAuth.getInstance().signOut();
             Toast.makeText(ProfileActivity.this, "Signed out successfully!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this.getApplicationContext(),NavigationActivity.class));
+            startActivity(new Intent(this.getApplicationContext(),MainActivity.class));
+            finish();
             return true;
         }
         else if (item.getItemId() == R.id.resource_center_menu){
@@ -132,17 +144,5 @@ public class ProfileActivity extends AppCompatActivity {
         else {
             return super.onOptionsItemSelected(item);
         }
-    }
-    @Override
-    public void onBackPressed() {
-        return;
-    }
-
-    public void openEditProfileActivity(View view) {
-        Intent intentToOpenEditProfileActivity = new Intent(this,EditProfileActivity.class);
-        intentToOpenEditProfileActivity.putExtra("username",usernameTextView.getText().toString());
-        intentToOpenEditProfileActivity.putExtra("grade",gradeTextView.getText().toString());
-        intentToOpenEditProfileActivity.putExtra("email",emailTextView.getText().toString());
-        startActivity(intentToOpenEditProfileActivity);
     }
 }

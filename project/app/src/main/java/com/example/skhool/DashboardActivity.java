@@ -37,7 +37,7 @@ public class DashboardActivity extends AppCompatActivity {
         if(item.getItemId() == R.id.sign_out_menu) {
             FirebaseAuth.getInstance().signOut();
             Toast.makeText(DashboardActivity.this, "Signed out successfully!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this.getApplicationContext(),NavigationActivity.class));
+            startActivity(new Intent(this.getApplicationContext(),MainActivity.class));
             return true;
         }
         else if (item.getItemId() == R.id.resource_center_menu){

@@ -88,18 +88,18 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             // send verification link
-                            FirebaseUser  fUser = fAuth.getCurrentUser();
-                            fUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Toast.makeText(RegisterActivity.this,"Verification email has been sent!",Toast.LENGTH_SHORT).show();
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Log.d(TAG, "onFailure: Email not sent " + e.getMessage());
-                                }
-                            });
+//                            FirebaseUser  fUser = fAuth.getCurrentUser();
+//                            fUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                @Override
+//                                public void onSuccess(Void aVoid) {
+//                                    Toast.makeText(RegisterActivity.this,"Verification email has been sent!",Toast.LENGTH_SHORT).show();
+//                                }
+//                            }).addOnFailureListener(new OnFailureListener() {
+//                                @Override
+//                                public void onFailure(@NonNull Exception e) {
+//                                    Log.d(TAG, "onFailure: Email not sent " + e.getMessage());
+//                                }
+//                            });
 
                             Toast.makeText(RegisterActivity.this, "Account Created!", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
