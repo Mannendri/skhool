@@ -19,6 +19,10 @@ public class NavigationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_navigation);
 
     }
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this,MainActivity.class));
+    }
 
     public void openResourceCenterActivity(View view) {
         Intent intentToOpenResourceCenterActivity = new Intent(this,ResourceCenterActivity.class);

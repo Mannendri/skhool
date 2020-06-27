@@ -2,6 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/dashboard_menu"
+        android:title="Your Dashboard"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/profile_menu"
+        android:title="Your Profile"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/resource_center_menu"
         android:title="Resource Center"
         app:showAsAction="never"/>
