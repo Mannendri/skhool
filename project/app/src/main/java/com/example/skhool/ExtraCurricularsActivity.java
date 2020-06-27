@@ -17,6 +17,8 @@ public class ExtraCurricularsActivity extends AppCompatActivity {
     EditText editTextName;
     ListView listView;
     int collegeScore;
+    ArrayList<ExtraCurricularItem> list = new ArrayList<ExtraCurricularItem>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,6 @@ public class ExtraCurricularsActivity extends AppCompatActivity {
     }
 
     public void addExtraCurricular(View view) {
-        ArrayList<ExtraCurricularItem> list = new ArrayList<ExtraCurricularItem>();
         ExtraCurricularItem newItem = new ExtraCurricularItem(editTextName.getText().toString(), editTextYears.getText().toString());
         list.add(newItem);
         ExtraCurricularAdapter extraCurricularAdapter = new ExtraCurricularAdapter(this,list);
