@@ -68,6 +68,7 @@
         android:textColor="@color/colorBackground"
         android:textSize="20dp"
         android:textStyle="bold"
+        android:onClick="openExtraCurricularsActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/collegeScoreInterface" />
 
