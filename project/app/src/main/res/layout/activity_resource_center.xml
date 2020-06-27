@@ -45,7 +45,8 @@
             android:onClick="openResourceCategoryActivity1"
             android:text="SCHOLARSHIPS"
             android:textColor="@color/colorBackground"
-            android:textSize="25dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
 
 
             />
@@ -74,7 +75,8 @@
             android:text="EXAM PREP"
             android:background="@color/colorPrimary"
             android:textColor="@color/colorBackground"
-            android:textSize="25dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
             android:id="@+id/exam"
             android:gravity="center"
 
@@ -102,7 +104,8 @@
             android:text="PLANNING"
             android:background="@color/colorPrimary"
             android:textColor="@color/colorBackground"
-            android:textSize="25dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
             android:id="@+id/planning"
             android:gravity="center"
 
