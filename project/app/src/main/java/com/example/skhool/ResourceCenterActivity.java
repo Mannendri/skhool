@@ -14,11 +14,11 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class ResourceCenterActivity extends AppCompatActivity {
 
+    FirebaseAuth fAuth = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resource_center);
-
     }
 
 
@@ -44,8 +44,10 @@ public class ResourceCenterActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
+        if (fAuth.getCurrentUser()!=null){
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.main_menu, menu);
+        }
         return true;
     }
     @Override
@@ -74,6 +76,10 @@ public class ResourceCenterActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
+        if (fAuth.getCurrentUser()!=null)
         return;
+        else{
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        }
     }
 }
