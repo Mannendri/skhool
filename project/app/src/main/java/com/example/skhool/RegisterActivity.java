@@ -26,6 +26,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -87,20 +88,6 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
-                            // send verification link
-//                            FirebaseUser  fUser = fAuth.getCurrentUser();
-//                            fUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
-//                                @Override
-//                                public void onSuccess(Void aVoid) {
-//                                    Toast.makeText(RegisterActivity.this,"Verification email has been sent!",Toast.LENGTH_SHORT).show();
-//                                }
-//                            }).addOnFailureListener(new OnFailureListener() {
-//                                @Override
-//                                public void onFailure(@NonNull Exception e) {
-//                                    Log.d(TAG, "onFailure: Email not sent " + e.getMessage());
-//                                }
-//                            });
-
                             Toast.makeText(RegisterActivity.this, "Account Created!", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
                             DocumentReference documentReference = fStore.collection("users").document(userID);
@@ -108,6 +95,9 @@ public class RegisterActivity extends AppCompatActivity {
                             user.put("username",username);
                             user.put("email",email);
                             user.put("grade",grade);
+                            user.put("readinessPts",0);
+                            ArrayList<String> extracurriculars = new ArrayList<>();
+                            user.put("extracurriculars", extracurriculars);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
