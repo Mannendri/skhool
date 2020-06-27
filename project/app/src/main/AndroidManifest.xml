@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditProfileActivity"></activity>
+        <activity android:name=".IntroInfoCenterActivity"></activity>
+        <activity android:name=".InfoCenterActivity" />
+        <activity android:name=".EditProfileActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ResourceCategoryActivity" />
         <activity android:name=".DashboardActivity" />
