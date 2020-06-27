@@ -18,6 +18,7 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -35,6 +36,14 @@ public class DashboardActivity extends AppCompatActivity {
         }
         else if (item.getItemId() == R.id.resource_center_menu){
             startActivity(new Intent(this.getApplicationContext(),ResourceCenterActivity.class));
+            return true;
+        }
+        else if (item.getItemId() == R.id.profile_menu){
+            startActivity(new Intent(this.getApplicationContext(),ProfileActivity.class));
+            return true;
+        }
+        else if (item.getItemId() == R.id.dashboard_menu){
+            startActivity(new Intent(this.getApplicationContext(),DashboardActivity.class));
             return true;
         }
         else {
