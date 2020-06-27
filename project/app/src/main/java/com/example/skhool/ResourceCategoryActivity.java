@@ -49,4 +49,8 @@ public class ResourceCategoryActivity extends AppCompatActivity {
         ResourceAdapter resourceAdapter = new ResourceAdapter(this,resourceItems);
         listView.setAdapter(resourceAdapter);
     }
+
+    private void increaseCollegeScore(){
+
+    }
 }
