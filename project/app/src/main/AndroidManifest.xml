@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ExtraCurricularsActivity"></activity>
+        <activity android:name=".ExtraCurricularsActivity"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
 
         <activity android:name=".IntroInfoCenterActivity"></activity>
         <activity android:name=".InfoCenterActivity" />
