@@ -65,4 +65,9 @@ public class DashboardActivity extends AppCompatActivity {
         Intent intentToExtraCurricularsActivity = new Intent(this, ExtraCurricularsActivity.class);
         startActivity(intentToExtraCurricularsActivity);
     }
+
+    public void openIntroInfoActivity(View view) {
+        Intent intentToOpenIntroInfoActivity = new Intent(this,IntroInfoCenterActivity.class);
+        startActivity(intentToOpenIntroInfoActivity);
+    }
 }
