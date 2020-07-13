@@ -58,9 +58,14 @@ public class ProfileActivity extends AppCompatActivity {
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                usernameTextView.setText(documentSnapshot.getString("username"));
-                gradeTextView.setText(documentSnapshot.getString("grade"));
-                emailTextView.setText(documentSnapshot.getString("email")) ;
+                if (e!=null){
+                    Log.d(TAG,"Error:"+e.getMessage());
+                }
+                else{
+                    usernameTextView.setText(documentSnapshot.getString("username"));
+                    gradeTextView.setText(documentSnapshot.getString("grade"));
+                    emailTextView.setText(documentSnapshot.getString("email")) ;
+                }
             }
         });
 
