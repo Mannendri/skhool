@@ -30,6 +30,7 @@
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:padding="5dp"
+        android:elevation="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header">
 
@@ -56,7 +57,7 @@
     </LinearLayout>
 
 
-    <TextView
+    <Button
         android:id="@+id/goToExtraCurriculars"
         android:layout_width="250dp"
         android:layout_height="50dp"
@@ -66,11 +67,10 @@
         android:gravity="center"
         android:text="Extracurriculars"
         android:textColor="@color/colorBackground"
-        android:textSize="20dp"
-        android:textStyle="bold"
         android:onClick="openExtraCurricularsActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/collegeScoreInterface" />
+    
 
     <Button
         android:id="@+id/button3"
