@@ -2,7 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <TextView
+<<<<<<< HEAD
+        android:id="@+id/name"
+        android:layout_width="189dp"
+        android:layout_height="277dp" />
+
+    <TextView
+        android:id="@+id/years"
+        android:layout_width="223dp"
+        android:layout_height="277dp" />
+=======
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
@@ -20,4 +31,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Years" />
+>>>>>>> 8a20a6e0d10b32ac2d76baeb9a7c17e8cf68a8cc
 </LinearLayout>

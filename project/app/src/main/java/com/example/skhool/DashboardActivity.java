@@ -24,6 +24,8 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         collegeScoreTV = findViewById(R.id.collegeScore);
+        Intent data = getIntent();
+        collegeScoreTV.setText(data.getStringExtra("collegeScore") +" / "+"50");
 
     }
     @Override
