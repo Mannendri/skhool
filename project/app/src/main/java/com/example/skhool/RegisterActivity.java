@@ -95,9 +95,8 @@ public class RegisterActivity extends AppCompatActivity {
                             user.put("username",username);
                             user.put("email",email);
                             user.put("grade",grade);
-                            user.put("readinessPts",0);
-                            ArrayList<String> extracurriculars = new ArrayList<>();
-                            user.put("extracurriculars", extracurriculars);
+                            ArrayList<String> collegeList = new ArrayList<>();
+                            user.put("extracurriculars", collegeList);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
