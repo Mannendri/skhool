@@ -53,13 +53,16 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="120dp"
         android:background="@color/colorPrimary"
+        android:padding="10dp"
         android:text="Search Results:"
+        android:textStyle="bold"
+        android:gravity="center"
         android:textColor="@color/colorBackground"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -74,16 +77,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="100dp"
-        android:text="Add"
+        android:layout_marginEnd="70dp"
         android:background="@color/colorPrimary"
+        android:text="Add"
         android:textColor="@color/colorBackground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        tools:visibility="gone" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

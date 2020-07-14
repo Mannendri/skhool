@@ -21,7 +21,7 @@ import org.json.JSONObject;
 
 public class CollegeSearchActivity extends AppCompatActivity {
     EditText collegeNameEditText;
-    Button searchCollegeName;
+    Button searchCollegeName, addBtn;
     TextView collegeNameText;
 
     @Override
@@ -32,6 +32,8 @@ public class CollegeSearchActivity extends AppCompatActivity {
         collegeNameEditText = findViewById(R.id.collegeNameEditText);
         searchCollegeName = findViewById(R.id.searchCollegeName);
         collegeNameText = findViewById(R.id.nameOfCollege);
+        addBtn = findViewById(R.id.addBtn);
+        addBtn.setVisibility(View.GONE);
     }
 
     public void fetchData(View view) {
@@ -55,6 +57,7 @@ public class CollegeSearchActivity extends AppCompatActivity {
                                 String collegeName = currentObject.getString("name");
                                 if(queriedName.equals(collegeName)){
                                     collegeNameText.setText(collegeName);
+                                    addBtn.setVisibility(View.VISIBLE);
                                 }
                             }
 
