@@ -79,7 +79,7 @@ public class DashboardActivity extends AppCompatActivity {
 }
 
     public void openCollegeList(View view) {
-//        Intent intentToCollegeList = new Intent(this, CollegeListActivity.class);
-//        startActivity(intentToCollegeList);
+        Intent intentToCollegeList = new Intent(this, CollegeListActivity.class);
+        startActivity(intentToCollegeList);
     }
 }

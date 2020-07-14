@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CollegeSearchActivity"></activity>
+        <activity android:name=".CollegeListActivity"></activity>
+        <activity android:name=".CollegeSearchActivity" />
         <activity
             android:name=".ExtraCurricularsActivity"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".IntroInfoCenterActivity" />
         <activity android:name=".InfoCenterActivity" />
         <activity android:name=".EditProfileActivity" />
