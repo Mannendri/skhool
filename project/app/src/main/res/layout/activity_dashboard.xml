@@ -30,7 +30,6 @@
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:padding="5dp"
-        android:elevation="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header">
 
@@ -70,19 +69,49 @@
         android:onClick="openExtraCurricularsActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/collegeScoreInterface" />
-    
+
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Information Center"
-        android:textColor="@color/colorBackground"
+        android:id="@+id/goToCollegeSearch"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="52dp"
         android:background="@color/colorPrimary"
-        android:onClick="openIntroInfoActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:gravity="center"
+        android:onClick="openCollegeSearch"
+        android:text="College Search"
+        android:textColor="@color/colorBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goToExtraCurriculars" />
+
+
+    <Button
+        android:id="@+id/goToCollegeList"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimary"
+        android:onClick="openCollegeList"
+        android:text="College List"
+        android:textColor="@color/colorBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goToCollegeSearch" />
+
+    <Button
+    android:id="@+id/button3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Information Center"
+    android:textColor="@color/colorBackground"
+    android:background="@color/colorPrimary"
+    android:onClick="openIntroInfoActivity"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
