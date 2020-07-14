@@ -72,4 +72,14 @@ public class DashboardActivity extends AppCompatActivity {
         Intent intentToOpenIntroInfoActivity = new Intent(this,IntroInfoCenterActivity.class);
         startActivity(intentToOpenIntroInfoActivity);
     }
+
+    public void openCollegeSearch(View view) {
+        Intent intentToCollegeSearchActivity  = new Intent(this, CollegeSearchActicity.class);
+        startActivity(intentToCollegeSearchActivity);
+    }
+
+    public void openCollegeList(View view) {
+        Intent intentToCollegeList = new Intent(this, CollegeListActivity.class);
+        startActivity(intentToCollegeList);
+    }
 }
